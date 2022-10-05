@@ -7,7 +7,7 @@
 Сборка контейнера:
 docker build -t stocks_crud ./
 
-Монтируем volume для хранени БД:
+Монтируем volume для хранения БД:
 docker volume create stocksdb
 
 Запускаем контейнер с сервисом:
