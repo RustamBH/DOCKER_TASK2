@@ -1,4 +1,21 @@
-# CRUD
+# CRUD: Склады и товары
+
+# Сборка контейнера
+В файл проекта .env необходимо указать свой SECRET_KEY.
+
+# Команды
+Сборка контейнера:
+docker build -t stocks_crud ./
+
+Монтируем volume для хранени БД:
+docker volume create stocksdb
+
+Запускаем контейнер с сервисом:
+docker run --publish 8000:8000 --detach --name stocks_crud --mount source=stocksdb,target=/code/db stocks_crud
+
+Создаем учетную запись admin:
+docker exec -it stocks_crud python manage.py createsuperuser
+
 
 # примеры API-запросов
 
