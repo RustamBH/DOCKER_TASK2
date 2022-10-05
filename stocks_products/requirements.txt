@@ -1,0 +1,6 @@
+django
+djangorestframework
+django-environ
+django_filter
+psycopg2-binary
+gunicorn
